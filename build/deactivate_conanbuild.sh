@@ -1,0 +1,1 @@
+. "/home/aaron/Programming/c/basics/5/build/deactivate_conanbuildenv-release-x86_64.sh"
