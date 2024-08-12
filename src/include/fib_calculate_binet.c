@@ -1,13 +1,20 @@
 #include <stdint.h>
 #include <math.h>
 
+/*** NOTE:
+*    Due to float limitations, Binet's formula returns accurate results only up to, but not including, F33. */
+
 /*****************************************
 *  Binet's Formula
 *  F(n) = 1/sqrt(5) * (((1 + sqrt(5))/2)^n - ((1 - sqrt(5))/2)^n) 
 *
-*  a.ka.
+*  a.k.a.
 *
 *  F(n) = 1/sqrt(5) * (Phi^n - (-(1/Phi))^n))
+*
+*  a.k.a.
+*
+*  F(n) = (Phi^n - (-Phi)^-n)/sqrt(5)
 *
 *******************************************/
 
