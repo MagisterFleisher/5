@@ -3,6 +3,7 @@
 1. Create:
     * ~~arbitrary precision value generation~~
     * REPL interface
+      - trim whitespace
     * logging library to log errors, etc
     * caching mechanism for memoization
     * OpenCl calculation

@@ -19,7 +19,7 @@ const uint64_t calculate_fibinacci_number(const int fibinacci_number) {
             fibinacci_sequence[2] = fibinacci_sequence[0] + fibinacci_sequence[1]; 
         }
     }
-        // printf("Fibinacci number %d: %ju\n", fibinacci_number, fibinacci_sequence[2]); }
+    // printf("Fibinacci number %d: %ju\n", fibinacci_number, fibinacci_sequence[2]); }
 
     return (fibinacci_sequence[2]);
     }
