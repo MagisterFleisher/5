@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include "include/fib_calculate.h"
 
-
 enum command_options {
     QUIT = 'Q',
     FIBINACCI_CALCULATE = 'F'
@@ -26,31 +25,7 @@ int main(int argument_count, char** argument_vector) {
         return 1; }
 
     /** Body  **********************************************************************************/
-    /* const int print_argument_return_errors = { 
-        print_argument_information(argument_count, argument_vector) };
-
-    if(print_argument_return_errors != 0) {
-        printf("Error detected printing arguments.  Exiting .....\n");
-        return 1; }
-    */
-    /** Read command line argument for number ***************************************************/
-    /* 
-    const int fibinacci_number = {
-        parse_argument_string_to_number_value(argument_vector) };
-    if(fibinacci_number == -1) {
-        printf("Error reading argument for fibinacci sequence number.  Exiting ...\n");
-        return 1; }
-
-    if(fibinacci_number <= 93) {
-        const uint64_t fibinacci_value = { calculate_fibinacci_number(fibinacci_number) };
-        printf("Fibinacci number %d: %ju\n\n", fibinacci_number, fibinacci_value);
-    } else {
-        printf("Fibinacci number %d requires greater than 64 bits.\n\n", fibinacci_number);
-        printf("Using GMP library to calculate with arbitrary precision.\n\n");
-        // GMP Arbitrary Precision stuff
-        calculate_fibinacci_number_arbitrary_precision(fibinacci_number);
-    }
-    */
+    
     const int repl_errors = {
         repl()
     };
@@ -116,7 +91,8 @@ const int parse_argument_string_to_number_value(char** argument_vector) {
 }
 
 /*** TODO:  Implement trimming whitespace */
-/*** TODO:  Add timeout functionality */
+/*** TODO:  Add timeout functionality 
+                Could use multithreading to do this.*/
 const int repl(void) {
     while(true) {
     char command_str[10];
