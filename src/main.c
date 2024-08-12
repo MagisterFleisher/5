@@ -7,7 +7,8 @@
 
 enum command_options {
     QUIT = 'Q',
-    FIBINACCI_CALCULATE = 'F'
+    FIBINACCI_CALCULATE = 'F',
+    BINET_CALCULATE = 'B'
 };
 
 const int parse_argument_string_to_number_value(char** argument_vector);
@@ -29,8 +30,7 @@ int main(int argument_count, char** argument_vector) {
     /** Body  **********************************************************************************/
     
     const int repl_errors = {
-        repl()
-    };
+        repl() };
     if(repl_errors != 0) {
         return 1; }
 
@@ -98,7 +98,7 @@ const int parse_argument_string_to_number_value(char** argument_vector) {
 const int repl(void) {
     while(true) {
         char command_str[10];
-        (void) printf("\n\n [Q]uit [F]ibinacci calculate");
+        (void) printf("\n\n [Q]uit [F]ibinacci calculate [B]inet\'s formula calculate");
         (void) printf("\n\n> ");
         (void) fgets(command_str, sizeof(command_str), stdin);
         (void) printf("Command: %s", command_str);
@@ -133,6 +133,20 @@ const int repl(void) {
                     
                     (void) printf("\nTime spent calculating: %f ms", (((float) time_spent_arbitrary / CLOCKS_PER_SEC)) * 1000);
                 }
+            };
+            case BINET_CALCULATE : {
+                (void) printf("\nCalculate Fibinacci Number %c\n", command_str[2]);
+                char* endptr;
+                char* fib_char = &command_str[2];
+                const int fibinacci_number = (int) {
+                    strtol(fib_char, &endptr, 10) };
+                
+                const clock_t start_time = { clock() };
+                const uint64_t fibinacci_value_binet = { calculate_fibinacci_number(fibinacci_number) };
+                const clock_t time_spent = { clock() - start_time};
+                    
+                (void) printf("Binet\'s formula\nFibinacci number %d: %ju\n\n", fibinacci_number, fibinacci_value_binet);
+                (void) printf("\nTime spent calculating: %f ms", (((float) time_spent / CLOCKS_PER_SEC)) * 1000);
             };
             default: {
                 break;
