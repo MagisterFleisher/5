@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -isystem /home/aaron/.conan2/p/b/gmp569edeaff041b/p/include
 
-C_FLAGS = -m64 -O3 -DNDEBUG
+C_FLAGS = -m64 -O3 -DNDEBUG -std=gnu2x
 
