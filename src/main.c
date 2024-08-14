@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <time.h>
 #include <ctype.h>
+#include <zlib.h>
 #include "include/fib_calculate.h"
 
 enum command_options {

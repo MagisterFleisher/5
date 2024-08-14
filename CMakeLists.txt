@@ -8,8 +8,9 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 
 find_package(gmp REQUIRED)
 find_package(Threads REQUIRED)
+find_package(ZLIB REQUIRED)
 
 add_executable(${PROJECT_NAME} src/main.c)
-target_link_libraries(${PROJECT_NAME} PRIVATE gmp::gmp Threads::Threads)
+target_link_libraries(${PROJECT_NAME} PRIVATE gmp::gmp Threads::Threads ZLIB::ZLIB)
 
 add_subdirectory(src/include)

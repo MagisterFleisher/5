@@ -18,4 +18,4 @@ const uint64_t      calculate_fibinacci_number_alt_analytic (   const int fibina
     return  (uint64_t) {
         inv_sqrt_5 * (pow(phi,fibinacci_number) - (cos(fibinacci_number * M_PI) * pow(phi, (-1 * fibinacci_number))))
     };
-}
+    }

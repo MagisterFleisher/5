@@ -20,7 +20,8 @@ const uint64_t  calculate_fibinacci_number  ( const int fibinacci_number  ) {
         }
     }
 
-    return (    fibinacci_sequence[2]   ); }
+    return (    fibinacci_sequence[2]   );
+    }
 
 void calculate_fibinacci_number_arbitrary_precision(const int fibinacci_number) {
     /** This function only gets called for fibinacci numbers past 93.
@@ -51,4 +52,5 @@ void calculate_fibinacci_number_arbitrary_precision(const int fibinacci_number) 
     mpz_clear(fib0);
     mpz_clear(fib1);
     mpz_clear(fib2);
-    return; }
+    return; 
+    }
