@@ -9,6 +9,9 @@
     * OpenCl calculation
     * CUDA calculation
     * HIP calculation
+    * Implement a unum approach
+    * NPU libraries
+    
 
 2.  Ideas:
     * Use zlib to shink large fib values

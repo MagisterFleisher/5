@@ -10,13 +10,17 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
   /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
+  /usr/include/bits/confname.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
+  /usr/include/bits/environments.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
   /usr/include/bits/flt-eval-method.h \
   /usr/include/bits/fp-fast.h \
   /usr/include/bits/fp-logb.h \
+  /usr/include/bits/getopt_core.h \
+  /usr/include/bits/getopt_posix.h \
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
@@ -28,6 +32,7 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
   /usr/include/bits/mathcalls.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/posix2_lim.h \
+  /usr/include/bits/posix_opt.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthread_stack_min.h \
   /usr/include/bits/pthreadtypes-arch.h \
@@ -68,6 +73,7 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
   /usr/include/bits/types/timer_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/unistd_ext.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
@@ -89,6 +95,9 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
   /usr/include/time.h \
+  /usr/include/unistd.h \
+  /usr/include/zconf.h \
+  /usr/include/zlib.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdbool.h \
@@ -105,7 +114,9 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:
 
-/usr/include/sys/select.h:
+/usr/include/zlib.h:
+
+/usr/include/unistd.h:
 
 /usr/include/sys/cdefs.h:
 
@@ -139,11 +150,11 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
 
 /usr/include/bits/types/struct_itimerspec.h:
 
-/usr/include/bits/posix2_lim.h:
+/usr/include/bits/types/struct_FILE.h:
 
-/usr/include/linux/limits.h:
+/usr/include/bits/types/sigset_t.h:
 
-/usr/include/bits/types/clock_t.h:
+/usr/include/bits/types/locale_t.h:
 
 /usr/include/stdio.h:
 
@@ -151,15 +162,17 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
 
 /usr/include/bits/mathcalls-narrow.h:
 
+/usr/include/bits/unistd_ext.h:
+
 /usr/include/bits/stdio.h:
 
-/usr/include/bits/long-double.h:
-
-/usr/include/bits/fp-logb.h:
+/usr/include/bits/confname.h:
 
 /home/aaron/Programming/c/basics/5/src/main.c:
 
-/usr/include/bits/pthread_stack_min.h:
+/usr/include/bits/types/clockid_t.h:
+
+/usr/include/bits/atomic_wide_counter.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:
 
@@ -171,37 +184,43 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
 
 /usr/include/bits/iscanonical.h:
 
-/usr/include/bits/types/struct_FILE.h:
+/usr/include/bits/getopt_posix.h:
 
-/usr/include/bits/pthread_stack_min-dynamic.h:
+/usr/include/bits/thread-shared-types.h:
 
-/usr/include/bits/posix1_lim.h:
+/usr/include/bits/long-double.h:
 
-/usr/include/bits/fp-fast.h:
+/usr/include/bits/fp-logb.h:
 
 /usr/include/bits/flt-eval-method.h:
 
 /usr/include/bits/types/__locale_t.h:
 
+/usr/include/bits/floatn-common.h:
+
+/usr/include/bits/floatn.h:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/bits/endianness.h:
+
 /home/aaron/.conan2/p/b/gmp569edeaff041b/p/include/gmp.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/environments.h:
 
 /usr/include/stdint.h:
 
 /home/aaron/Programming/c/basics/5/src/include/fib_calculate_alt_analytic.c:
 
+/usr/include/zconf.h:
+
 /usr/include/alloca.h:
 
 /usr/include/bits/stdint-least.h:
 
-/usr/include/bits/timesize.h:
-
-/usr/include/bits/endian.h:
-
 /usr/include/bits/types/__sigset_t.h:
-
-/usr/include/bits/libm-simd-decl-stubs.h:
-
-/usr/include/bits/endianness.h:
 
 /usr/include/bits/byteswap.h:
 
@@ -211,9 +230,31 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
 
 /usr/include/bits/mathcalls.h:
 
-/usr/include/bits/floatn-common.h:
+/usr/include/bits/fp-fast.h:
 
-/usr/include/bits/floatn.h:
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/bits/stdint-uintn.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/types/clock_t.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/pthread_stack_min.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/timesize.h:
+
+/usr/include/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/stdc-predef.h:
 
@@ -239,8 +280,6 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
 
 /usr/include/bits/stdlib-bsearch.h:
 
-/usr/include/bits/types/sigset_t.h:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h:
 
 /usr/include/bits/struct_mutex.h:
@@ -251,7 +290,7 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
 
 /usr/include/bits/struct_rwlock.h:
 
-/usr/include/bits/thread-shared-types.h:
+/usr/include/bits/getopt_core.h:
 
 /usr/include/bits/types.h:
 
@@ -272,15 +311,3 @@ CMakeFiles/fibGen5.dir/src/main.c.o: /home/aaron/Programming/c/basics/5/src/main
 /usr/include/bits/local_lim.h:
 
 /usr/include/bits/types/__mbstate_t.h:
-
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/bits/types/clockid_t.h:
-
-/usr/include/endian.h:
-
-/usr/include/bits/stdint-uintn.h:
-
-/usr/include/bits/types/cookie_io_functions_t.h:
-
-/usr/include/bits/types/locale_t.h:

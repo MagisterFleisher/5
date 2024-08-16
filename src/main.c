@@ -10,7 +10,8 @@ enum command_options {
     QUIT = 'Q',
     FIBINACCI_CALCULATE = 'F',
     BINET_CALCULATE = 'B',
-    ALT_ANALYTIC_CALCULATE = 'A'
+    ALT_ANALYTIC_CALCULATE = 'A',
+    GMP = 'G'
 };
 
 const int   parse_argument_string_to_number_value ( char** argument_vector  );
@@ -96,11 +97,12 @@ const int   parse_argument_string_to_number_value(  char** argument_vector  ) {
 
 /*** TODO:  Implement trimming whitespace */
 /*** TODO:  Add timeout functionality 
-                Could use multithreading to do this.*/
+                Could use multithreading to do this.
+            Could use an optional for allowing both */
 const int   repl(   void    ) {
     while(  true    ) {
         char    command_str[10];
-        (void)  printf("\n\n [Q]uit [F]ibinacci calculate [B]inet\'s formula calculate [A]lternate Analytic calculate");
+        (void)  printf("\n\n [Q]uit [F]ibinacci calculate [B]inet\'s formula calculate [A]lternate Analytic calculate [G]MP fibinacci function");
         (void)  printf("\n\n> ");
         (void)  fgets(command_str, sizeof(command_str), stdin);
         (void)  printf("Command: %s", command_str);
@@ -144,12 +146,20 @@ const int   repl(   void    ) {
                 const int fibinacci_number = (int) {
                     strtol(fib_char, &endptr, 10) };
                 
-                clock_t start_time = { clock() };
-                const uint64_t  fibinacci_value_binet = { calculate_fibinacci_number_binet(fibinacci_number) };
-                clock_t time_spent = { clock() - start_time};
+                if( fibinacci_number <= 33) {
+                    clock_t start_time =    { clock() };
+                    const   uint64_t        fibinacci_value_binet = { calculate_fibinacci_number_binet(fibinacci_number) };
+                    clock_t time_spent =    { clock() - start_time};
                     
-                (void)  printf("Binet\'s formula\nFibinacci number %d: %ju\n\n", fibinacci_number, fibinacci_value_binet);
-                (void)  printf("\nTime spent calculating: %f ms", (((float) time_spent / CLOCKS_PER_SEC)) * 1000);
+                    (void)  printf("Binet\'s formula\nFibinacci number %d: %ju\n\n", fibinacci_number, fibinacci_value_binet);
+                    (void)  printf("\nTime spent calculating: %f ms", (((float) time_spent / CLOCKS_PER_SEC)) * 1000);
+                } else {
+                    clock_t start_time =    { clock() };
+                    (void)  calculate_fibinacci_number_binet_arbitrary_precision(fibinacci_number);
+                    clock_t time_spent =    { clock() - start_time};
+                    
+                    (void)  printf("\nTime spent calculating: %f ms", (((float) time_spent / CLOCKS_PER_SEC)) * 1000);
+                }
                 break;
             };
             case ALT_ANALYTIC_CALCULATE : {
