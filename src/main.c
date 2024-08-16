@@ -101,7 +101,7 @@ const int   parse_argument_string_to_number_value(  char** argument_vector  ) {
             Could use an optional for allowing both */
 const int   repl(   void    ) {
     while(  true    ) {
-        char    command_str[10];
+        char    command_str[100];
         (void)  printf("\n\n [Q]uit [F]ibinacci calculate [B]inet\'s formula calculate [A]lternate Analytic calculate [G]MP fibinacci function");
         (void)  printf("\n\n> ");
         (void)  fgets(command_str, sizeof(command_str), stdin);
@@ -177,6 +177,19 @@ const int   repl(   void    ) {
                 (void)  printf("\nTime spent calculating: %f ms", (((float) time_spent / CLOCKS_PER_SEC)) * 1000);
                 break;
             };
+            case GMP : {
+                (void)  printf("\nCalculate Fibinacci Number %c\n", command_str[2]);
+                char*   endptr;
+                char*   fib_char = &command_str[2];
+                const int fibinacci_number = (int) {
+                    strtol(fib_char, &endptr, 10) };
+                
+                clock_t start_time = { clock() };
+                (void) fib_calculate_gmp(fibinacci_number);
+                clock_t time_spent = { clock() - start_time};
+                (void)  printf("\nTime spent calculating: %f ms", (((float) time_spent / CLOCKS_PER_SEC)) * 1000);
+                break;
+            }
             default: {
                 break;
             }; 
