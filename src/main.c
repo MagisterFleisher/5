@@ -100,12 +100,15 @@ const int   parse_argument_string_to_number_value(  char** argument_vector  ) {
                 Could use multithreading to do this.
             Could use an optional for allowing both */
 const int   repl(   void    ) {
-    while(  true    ) {
-        char    command_str[100];
+    //while(  true    ) {
+        char    str[1000];
+        int     len;
         (void)  printf("\n\n [Q]uit [F]ibinacci calculate [B]inet\'s formula calculate [A]lternate Analytic calculate [G]MP fibinacci function");
         (void)  printf("\n\n> ");
-        (void)  fgets(command_str, sizeof(command_str), stdin);
-        (void)  printf("Command: %s", command_str);
+        (void)  scanf("%[^\n]s%d", str, &len);
+        (void)  printf("%s %d", str, len);
+        // (void)  fgets(command_str, sizeof(command_str), stdin);
+/*        (void)  printf("Command: %s", command_str);
 
         switch( toupper(command_str[0])) {
             case QUIT: {
@@ -129,8 +132,7 @@ const int   repl(   void    ) {
                 } else {
                     (void)  printf("Fibinacci number %d requires greater than 64 bits.\n\n", fibinacci_number);
                     (void)  printf("Using GMP library to calculate with arbitrary precision.\n\n");
-                    /****** GMP Arbitrary Precision stuff */
-                    
+                    //****** GMP Arbitrary Precision stuff * 
                     clock_t start_time = { clock() };
                     (void)  calculate_fibinacci_number_arbitrary_precision(fibinacci_number);
                     clock_t time_spent = { clock() - start_time };
@@ -194,6 +196,6 @@ const int   repl(   void    ) {
                 break;
             }; 
         }
-    }
+    }*/
     return 0;
 }

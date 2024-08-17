@@ -11,7 +11,7 @@
     * HIP calculation
     * Implement a unum approach
     * NPU libraries
-    
+    * dyamically read input line, enter certain length
 
 2.  Ideas:
     * Use zlib to shink large fib values
